@@ -1,15 +1,3 @@
-'''
-Stmt_list   -> Stmt Stmt_list | .
-Stmt        -> id equal Expr | print Expr.
-Expr        -> Term Term_tail.
-Term_tail   -> xor Term Term_tail | .
-Term        -> Factor Factor_tail.
-Factor_tail -> or Factor Factor_tail | .
-Factor      -> Atom Atom_tail.
-Atom_tail   -> and Atom Atom_tail | .
-Atom        -> ( Expr ) | id | number.
-'''
-
 import plex
 
 class ParseError(Exception):
